@@ -1,40 +1,137 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
+    <title>Personal Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #F4F4F4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
         }
         .container {
-            text-align: center;
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
             background: white;
             border-radius: 10px;
-            padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
         }
         h1 {
             color: #333;
+            margin: 0;
         }
         p {
             color: #666;
+            margin: 0;
+        }
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .section p, .section ul {
+            margin-top: 10px;
+            color: #666;
+            text-align: left;
+        }
+        .section ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+        nav {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul a {
+            text-decoration: none;
+            color: #007BFF;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>欢迎访问我的个人主页</h1>
-        <p>这是一个简单的 GitHub Pages 示例。</p>
+        <nav>
+            <ul>
+                <li><a href="#work-experience">Work Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+        
+        <div class="profile">
+            <img src="images/avatar.jpg" alt="Avatar">
+            <div>
+                <h1>Your Name</h1>
+                <p>A brief self-introduction. You can write some information about yourself here, such as your interests, skills, etc.</p>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="work-experience" class="section">
+            <h2>Work Experience</h2>
+            <p>You can describe your previous work experience, positions, and responsibilities here.</p>
+            <ul>
+                <li><strong>Company Name</strong> - Position (Year - Year)</li>
+                <li><strong>Company Name</strong> - Position (Year - Year)</li>
+                <li>...</li>
+            </ul>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <p>You can describe the projects you have participated in and the accomplishments you have achieved.</p>
+            <ul>
+                <li><strong>Project Name</strong> - Brief Description</li>
+                <li><strong>Project Name</strong> - Brief Description</li>
+                <li>...</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
